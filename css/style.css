@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+
+body {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+
+.MastHead {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../pictures/roberto-unsplash.jpg");
+    /* set size and stop repetition */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+    height: 800px;
+}
+
+.Logo {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid rgb(255, 255, 255);
+    width: 10%;
+    margin: 4px auto;
+}
+
+.Logo_Main {
+    font-size: 2.875rem;
+}
+
+.Logo_Secondary{
+    font-size: 1.5rem;
+}
+.Logo_Third {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.Nav_Link {
+    margin: 0 1rem;
+    padding: 0rem 0.7rem;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    color: white;
+   
+    display: inline-flex;
+    min-height: 2.8125rem;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.25rem;
+    position: relative;
+    margin: 0.625rem 0 0 0;
+}
+
+nav ul a, header a {
+    text-decoration: none;
+}
+
+.Nav a:hover {
+    border: 1px solid white;
+}
+
+.hero-text {
+    background-color: #281d1b;
+    position: absolute;
+    bottom: 3%;
+    left: 10%;
+    width: 80%;
+    font-size: 1.2rem;
+    color: white;
+    padding: 8px 0;
+    border: 2px solid rgb(255, 255, 255);
+   text-align: center;
+   letter-spacing: 2px;
+}
+
+#main {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0rem;
+    padding: 0 2rem;
+}
+
+#main div {
+    padding: 0;
+}
+
+#main div figure{
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+}
+
+#main div figure img {
+    max-width: 90%;
+    height: 100%;
+    /*object-fit: cover;*/
+    /*object-position: 50% 50%;*/
+    padding-left: 1.5rem;
+}
+
+#main h3 {
+    padding-right: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#main ul {
+    list-style: none;
+    display: flex;
+    padding-left: 4rem;
+} 
+
+#main ul li {
+    padding: 0 35px; 
+}
+
+#main li:hover {
+    border: 1px solid black;
+}
+
+#main div p{
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 0 6rem;
+    text-align: left;
+}
+
+#main div a {
+    color: black;
+}
+
+footer {
+    border-top: 1px solid #202020;
+    text-align: center;
+    font-size: 1.1em;
+    color: #202020;
+    padding: 40px 0;
+}
+
+footer .content {
+    display: inline;
+}
+
+footer a {
+    margin-left: 30px;
+    color: #777;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: #777;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+@media screen and (max-width: 1200px) {
+    #main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 10px 0 0 0;
+        gap: 0;
+        padding-left: 0;
+    }
+    
+    #main div figure img {
+        max-width: 90%;
+        height: 90%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        padding-left: 0rem;
+    }
+
+    #main ul li {
+        padding: 0 25px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .MastHead {
+        min-height: 40rem;
+        max-height: 45rem;
+    }
+
+    #main {
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+    }
+
+    #main div figure img {
+        max-width: 100%;
+        height: auto;
+        padding-left: .5rem;
+    }
+
+    #main h3 {
+        font-size: 1.1rem;
+    }
+
+    #main div p {
+        font-size: .9rem;
+    }
+
+
+    .Nav_Link {
+        font-size: .9rem;
+    }
+
+    .Logo_Main {
+        font-size: 1.5rem;
+    }
+    
+    .Logo_Secondary{
+        font-size: .9rem;
+    }
+    .Logo_Third {
+        font-size: .6rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-text {
+        font-size: .9em;
+    }
+
+    footer {
+        font-size: .9em;
+    }
+}
+
+
+@media screen and (max-width: 451px) {
+    .Logo {
+        border: none;
+    }
+
+    .MastHead {
+        background-image: url('../pictures/roberto-unsplash-960_x_1440.jpg');
+        min-height: 35rem;
+        max-height: 45rem;
+    }
+
+    .Nav ul {
+        display: inline-block;
+        padding-left: 6rem;
+        align-items: center;
+        margin-left: 2.2rem;
+    }
+
+    #main div figure img {
+        padding-left: 0;
+    }
+
+    #main ul li {
+        padding: 0 20px;
+    }
+    
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .MastHead {
+    min-height: 35rem;
+    max-height: 38rem;
+    }
+}
